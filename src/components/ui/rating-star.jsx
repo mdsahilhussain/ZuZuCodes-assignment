@@ -11,16 +11,19 @@ const RatingStars = ({ rating }) => {
         if (type === "full") {
           return (
             <OptimizedImage
-              src={"/assets/icons/star-full.svg"}
+              key={index}
+              src={"/icons/star-full.svg"}
               alt=""
-              className="text-yellow-400 w-5 h-5 fill-yellow-400"
+              className="text-yellow-400 w-3.5 sm:w-5 h-3.5 sm:h-5 fill-yellow-400"
             />
           );
         } else if (type === "half") {
           return (
-            <StarHalf
+            <OptimizedImage
               key={index}
-              className="text-yellow-400 w-5 h-5 fill-yellow-400"
+              src={"/icons/star-half.svg"}
+              alt=""
+              className="text-yellow-400 w-3.5 sm:w-5 h-3.5 sm:h-5 fill-yellow-400"
             />
           );
         } else {
