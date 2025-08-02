@@ -37,7 +37,7 @@ const DeveloperCard = ({ detail }) => {
         <OptimizedImage
           src={detail.src}
           alt={detail.alt}
-          className="w-auto h-full"
+          className="w-[8rem] lg:w-[28rem] xl-[32rem] h-auto object-contain"
         />
         <div className="flex flex-col font-semibold text-[#000000] relative">
           <h2 className="text-[1rem] sm:text-[1.2rem] flex items-center gap-2">

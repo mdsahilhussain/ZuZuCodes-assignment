@@ -3,6 +3,7 @@ import OptimizedImage from "./optimized-image";
 import { getStarRating } from "../../lib/utils";
 
 const RatingStars = ({ rating }) => {
+  console.log("RatingStars component rendered with rating:", rating);
   const stars = getStarRating(rating);
 
   return (
