@@ -10,7 +10,7 @@ const Dropdown = ({ dropList = [], title, value, onChange }) => {
         onChange={(e) => onChange(e.target.value)}
         className="appearance-none border border-[#D9D9D9] p-1 sm:p-2 pr-6 md:pr-8 bg-[#FFFFFF] text-[#000000] text-[0.563rem] md:text-sm font-normal w-full"
       >
-        <option selected>{title || "Choose an option"}</option>
+        <option value="">{title || "Choose an option"}</option>
         {dropList?.map((item) => (
           <option key={item.id} value={item.value}>
             {item.label}
