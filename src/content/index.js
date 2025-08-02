@@ -84,7 +84,7 @@ export const dummyDeveloperData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     service: ["Full website design", "Banner design", "New pages"],
     rating: {
-      value: 5,
+      value: 2.5,
       count: 125,
     },
     responseTime: "within a day",
@@ -144,7 +144,7 @@ export const dummyDeveloperData = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ",
     service: ["Full website design", "Banner design", "New pages"],
     rating: {
-      value: 5,
+      value: 3.5,
       count: 120,
     },
     responseTime: "within a day",
