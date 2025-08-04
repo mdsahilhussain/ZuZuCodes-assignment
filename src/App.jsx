@@ -37,7 +37,7 @@ function App() {
         <Navbar />
         <div className="w-full h-fit">
           <div className="w-full h-fit lg:min-h-[12rem] flex items-center gap-6 py-8 px-2.5 sm:px-4 xl:px-[5.5rem] 2xl:px-0">
-            <Button className="bg-[#D9D9D9] hidden lg:block">Back</Button>
+            <Button aria-label="back" className="bg-[#D9D9D9] hidden lg:block">Back</Button>
             <div className="grow h-full flex flex-col justify-center items-center gap-2">
               <h1 className="text-2xl sm:text-3xl text-[#000000] font-semibold">
                 Web Designer
@@ -48,8 +48,8 @@ function App() {
                 contact button.
               </p>
               <div className="flex gap-3.5 mt-4 sm:mt-0">
-                <Button>Your matches</Button>
-                <Button className="bg-[#000000]">Replies</Button>
+                <Button aria-label="your-matches">Your matches</Button>
+                <Button aria-label="replies" className="bg-[#000000]">Replies</Button>
               </div>
             </div>
           </div>
@@ -80,7 +80,7 @@ function App() {
                 <strong className="font-semibold">top 5 matches</strong> to hear
                 back faster
               </h2>
-              <Button className="bg-[#000000] text-lg font-medium hidden lg:flex">
+              <Button aria-label="request-best-matches" className="bg-[#000000] text-lg font-medium hidden lg:flex">
                 Request your best matches here
               </Button>
             </div>
@@ -107,7 +107,7 @@ function App() {
       </section>
       {filteredDevelopers.length > visibleCount && (
         <div className="w-full h-fit text-center mb-12">
-          <Button onClick={() => setVisibleCount(visibleCount + 5)}>
+          <Button aria-label="see-more" onClick={() => setVisibleCount(visibleCount + 5)}>
             See More Professionals
           </Button>
         </div>

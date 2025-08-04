@@ -19,7 +19,7 @@ const Navbar = () => {
         </h1>
         <CustomDropdown title="Chander"/>
       </div>
-      <Button className="bg-transparent flex lg:hidden items-center gap-2 text-[#000000]">
+      <Button aria-label="login" className="bg-transparent flex lg:hidden items-center gap-2 text-[#000000]">
         <OptimizedImage src={"/icons/search.svg"} alt="search icon" className="w-5 h-5" /> Login
       </Button>
     </nav>
