@@ -9,7 +9,10 @@ const DeveloperCardDescription = ({ detail }) => {
         {detail.description}
       </p>
       <div className="w-full flex items-center justify-between mt-4">
-        <Button className="flex items-center gap-2 text-[#00AFE3] bg-transparent text-sm p-0">
+        <Button
+          aria-label="view-profile"
+          className="flex items-center gap-2 text-[#00AFE3] bg-transparent text-sm p-0"
+        >
           View Profile
           <OptimizedImage
             src={"/icons/right-arrow.svg"}
@@ -17,7 +20,10 @@ const DeveloperCardDescription = ({ detail }) => {
             className="w-4 h-4"
           />
         </Button>
-        <Button className="flex items-center gap-2 rounded-full text-sm bg-[#AAC9D2] capitalize">
+        <Button
+          aria-label="response-time"
+          className="flex items-center gap-2 rounded-full text-sm bg-[#AAC9D2] capitalize"
+        >
           <OptimizedImage
             src={"/icons/action.svg"}
             alt={" action icon"}
@@ -60,6 +66,7 @@ const DeveloperCard = ({ detail }) => {
             <div className="items-center gap-2 py-4 hidden xl:flex">
               {detail.service.map((service, index) => (
                 <Button
+                  aria-label={service.toLowerCase().replace(/\s+/g, "-")}
                   key={index}
                   className="rounded-full border border-[#B3B3B3] text-[.75rem] text-[#B3B3B3] bg-transparent"
                 >
@@ -69,7 +76,7 @@ const DeveloperCard = ({ detail }) => {
             </div>
           )}
           <div className="hidden lg:block xl:portrait:block">
-          <DeveloperCardDescription detail={detail} />
+            <DeveloperCardDescription detail={detail} />
           </div>
           <div className="absolute top-2 xl:top-5 right-2 xl:right-5 items-center gap-2 hidden lg:flex">
             <RatingStars rating={detail?.rating?.value} />
@@ -79,12 +86,14 @@ const DeveloperCard = ({ detail }) => {
       </div>
       <div className="w-full h-fit py-6 block lg:hidden">
         <div className="w-full flex xl:hidden items-center justify-between pb-4">
-          <Button className="rounded-full border border-[#B3B3B3] text-[.75rem] text-[#B3B3B3] bg-transparent">
+          <Button aria-label="patio-services" className="rounded-full border border-[#B3B3B3] text-[.75rem] text-[#B3B3B3] bg-transparent">
             {"Patio Services"}
           </Button>
           <div className="w-fit h-fit flex items-center gap-2 mr-3">
             <RatingStars rating={detail?.rating?.value} />{" "}
-            <h2 className="text-[0.75rem] sm:text-[1.2rem] font-semibold">{detail?.rating?.count}</h2>
+            <h2 className="text-[0.75rem] sm:text-[1.2rem] font-semibold">
+              {detail?.rating?.count}
+            </h2>
           </div>
         </div>
         <DeveloperCardDescription detail={detail} />
@@ -95,7 +104,7 @@ const DeveloperCard = ({ detail }) => {
           alt="square check icon"
           className="w-6 h-6"
         />
-        <Button>Request reply</Button>
+        <Button aria-label="request-reply">Request reply</Button>
       </div>
     </div>
   );
